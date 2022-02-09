@@ -1,0 +1,51 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "StorageAccountName": {
+            "type": "string",
+            "defaultValue": "storage",
+            "metadata": {
+                "description": "Storage Account name"
+            }
+        },
+        "StorageType": {
+            "type": "string",
+            "defaultValue": "Standard_LRS",
+            "metadata": {
+                "description": "Storage Account Type"
+            }
+        },
+        "Location": {
+            "type": "string",
+            "defaultValue": "Uk West",
+            "metadata": {
+                "description": "Location of resource"
+            }
+        },
+        "DisplayName": {
+            "type": "string",
+            "metadata": {
+                "description": "This is the display name"
+            }
+        }
+    },
+    "functions": [],
+    "variables": {},
+    "resources": [
+        {
+        "name": "[parameters('StorageAccountName')]",
+        "type": "Microsoft.Storage/storageAccounts",
+        "apiVersion": "2021-04-01",
+        "tags": {
+            "displayName": "[parameters('DisplayName')]"
+        },
+        "location": "[parameters('Location')]",
+        "kind": "StorageV2",
+        "sku": {
+            "name": "[parameters('StorageType')]",
+            "tier": "Standard"
+        }
+    }],
+    "outputs": {}
+}
