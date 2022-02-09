@@ -1,0 +1,45 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "Location": {
+            "value": "uk south"
+        },
+        "WindowsOSVersion": {
+            "value": "2019-Datacenter"
+        },
+        "VmName": {
+            "value": "test-01"
+        },
+        "adminUsername": {
+            "value": "az-admin"
+        },
+        "adminPassword": {
+            "value": "pa55word!"
+        },
+        "VirtualNetworkName": {
+            "value": "vnet-amit" 
+        },
+        "virtualNetworkNeworExisting": {
+            "value": "existing" 
+        },
+        "virtualNetworkAddressPrefix": {
+            "value": "10.0.0.0" 
+        },
+        "virtualNetworkResourceGroup": {
+            "value": "arm-introduction-01"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_B1s" 
+        },
+        "subnetName": {
+            "value": "defaultsubnet" 
+        },
+        "subnetAddressPrefix": {
+            "value": "10.0.0.0" 
+        },
+        "baseUrl": {
+            "value": ""
+        }
+    }
+}
